@@ -13,25 +13,13 @@ const firebaseConfig = {
     measurementId: "G-0JYEL97PJB"
 };
 
-document.addEventListener('mousemove', (e) => {
-    const { clientX: x, clientY: y } = e; // Get cursor x, y
-    const { innerWidth: width, innerHeight: height } = window; // Get screen width, height
-
-    // Calculate background position as a percentage relative to the cursor
-    const xPercent = (x / width) * 100;
-    const yPercent = (y / height) * 100;
-
-    // Set the background position dynamically
-    document.body.style.backgroundPosition = `${xPercent}% ${yPercent}%`;
-});
-
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
 
 // Function to send a webhook notification for signup
 function sendWebhookNotification(action, userEmail) {
-    const webhookUrl = "https://webhook.site/0eaf34f7-6869-4dde-88ba-10cbfb3b6843";  // Replace with your actual webhook URL
+    const webhookUrl = "https://webhook.site/0eaf34f7-6869-4dde-88ba-10cbfb3b6843";
     const payload = {
         action: action,
         userEmail: userEmail,
@@ -47,6 +35,18 @@ function sendWebhookNotification(action, userEmail) {
     .catch(error => console.error('Error sending webhook notification:', error));
 }
 
+// Function to show popup message
+function showPopup() {
+    const popup = document.getElementById('popup');
+    popup.style.display = 'flex';  // Display the popup
+}
+
+// Function to hide popup message
+function hidePopup() {
+    const popup = document.getElementById('popup');
+    popup.style.display = 'none';
+}
+
 // Handle signup form submission
 window.addEventListener('load', () => {
     const signupForm = document.getElementById('signupForm');
@@ -54,6 +54,13 @@ window.addEventListener('load', () => {
     const passwordInput = document.getElementById('password');
     const toggleConfirmPassword = document.getElementById('toggleConfirmPassword');
     const confirmPasswordInput = document.getElementById('confirmpassword'); 
+    const closePopup = document.getElementById('closePopup');
+
+    // Close popup when 'Close' button is clicked
+    closePopup.addEventListener('click', () => {
+        hidePopup();
+        window.location.href = "../index.html"; // Redirect to login page
+    });
 
     // Toggle password visibility
     togglePassword.addEventListener('click', function () {
@@ -68,7 +75,6 @@ window.addEventListener('load', () => {
         confirmPasswordInput.setAttribute('type', type);
         this.textContent = type === 'password' ? '👁️' : '👁️‍🗨️';
     });
-
 
     if (signupForm) {
         signupForm.addEventListener('submit', (e) => {
@@ -88,8 +94,11 @@ window.addEventListener('load', () => {
                     // Send webhook notification on successful signup
                     sendWebhookNotification('User signed up', user.email);
 
-                    // Redirect to Main.html after signup
-                    window.location.href = "../index.html"; 
+                    // Show popup and redirect after 2 seconds
+                    showPopup();
+                    setTimeout(() => {
+                        window.location.href = "../index.html";
+                    }, 2000); // Wait for 2 seconds before redirecting
                 })
                 .catch((error) => {
                     console.error('Signup failed:', error.code, error.message);
