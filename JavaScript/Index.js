@@ -31,7 +31,7 @@ document.addEventListener('mousemove', (e) => {
 
 // Function to send login data to the server
 function sendLoginDataToServer(email) {
-    const serverUrl = "http://localhost:3000/send-login-data"; // Change this to your server's URL
+    const serverUrl = "https://midtermoutput-group1-libarbas-server.onrender.com/send-login-data"; // Change this to your server's URL
     const payload = {
         email: email,
         timestamp: new Date().toISOString(),

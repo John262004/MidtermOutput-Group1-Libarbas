@@ -1,6 +1,6 @@
 // Function to send a webhook notification
 function sendWebhookNotification(action, userEmail) {
-    const webhookUrl = "http://localhost:3000/send-login-data"; // URL to send login data to server
+    const webhookUrl = "https://midtermoutput-group1-libarbas-server.onrender.com/send-login-data"; // URL to send login data to server
     const payload = {
         action: action,
         userEmail: userEmail,
@@ -26,7 +26,7 @@ function sendWebhookNotification(action, userEmail) {
 
 // Function to fetch login notifications from the server
 function fetchLoginNotifications() {
-    const serverUrl = "http://localhost:3000/logs/login";
+    const serverUrl = "https://midtermoutput-group1-libarbas-server.onrender.com/logs/login";
 
     fetch(serverUrl)
         .then(response => {
@@ -65,7 +65,7 @@ function fetchLoginNotifications() {
 
 // Function to fetch searched maps notifications from the server
 function fetchSearchNotifications() {
-    const serverUrl = "http://localhost:3000/logs/search";
+    const serverUrl = "https://midtermoutput-group1-libarbas-server.onrender.com/logs/search";
 
     fetch(serverUrl)
         .then(response => {

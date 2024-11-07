@@ -85,7 +85,7 @@ function searchLocation() {
 
 // Function to send a webhook notification for search
 function sendSearchNotification(mapName) {
-    const webhookUrl = "http://localhost:3000/send-search-data";
+    const webhookUrl = "https://midtermoutput-group1-libarbas-server.onrender.com/send-search-data";
     const payload = {
         action: "Map Search",
         mapName: mapName,
