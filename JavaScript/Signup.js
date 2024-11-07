@@ -13,6 +13,19 @@ const firebaseConfig = {
     measurementId: "G-0JYEL97PJB"
 };
 
+document.addEventListener('mousemove', (e) => {
+    const { clientX: x, clientY: y } = e; // Get cursor x, y
+    const { innerWidth: width, innerHeight: height } = window; // Get screen width, height
+
+    // Calculate background position as a percentage relative to the cursor
+    const xPercent = (x / width) * 100;
+    const yPercent = (y / height) * 100;
+
+    // Set the background position dynamically
+    document.body.style.backgroundPosition = `${xPercent}% ${yPercent}%`;
+});
+
+
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
