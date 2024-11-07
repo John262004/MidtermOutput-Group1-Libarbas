@@ -1,0 +1,218 @@
+body {
+    font-family: 'Crimson Pro', serif;
+    margin: 0;
+    padding: 0;
+    background-color: #000000;
+}
+
+nav a {
+    display: inline-block;
+    padding: 10px 15px;
+}
+
+.nav-icon {
+    width: 24px;
+    height: 24px;
+    margin: 0 10px;
+    vertical-align: middle;
+}
+
+nav {
+    background-color: rgba(0, 0, 0, 0.378);
+    padding: 10px;
+    text-align: center;
+    width: 100%;
+}
+
+nav a {
+    display: inline-block;
+    padding: 10px 15px;
+}
+
+nav a:hover {
+    background-color: #555;
+}
+
+.nav-icon {
+    width: 30px;
+    height: auto;
+}
+
+.logout-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px 15px;
+    display: inline-block;
+    align-items: center;
+    margin-right: 10px;
+}
+
+.logout-button .nav-icon {
+    width: 24px;
+    height: 24px;
+    vertical-align: middle;
+}
+
+.logout-button:hover {
+    transform: translateY(-10px);
+}
+
+#notificationCount {
+    background-color: red;
+    color: white;
+    border-radius: 50%;
+    padding: 2px 6px;
+    position: relative;
+    top: -12px;
+    right: 5px;
+    font-size: 12px;
+}
+
+.map-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1200px;
+    height: 650px;
+    box-sizing: border-box;
+}
+
+#map {
+    height: 100%;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+#location-search {
+    padding: 10px;
+    width: 60%;
+    font-size: 16px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+    margin-right: 10px;
+}
+
+.search-btn {
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.search-btn:hover {
+    background-color: #218838;
+}
+
+.search-btn img {
+    width: 25px;
+    height: 25px;
+    display: block;
+    margin: 0 auto;
+}
+
+.search-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+h1 {
+    color: #ffffff;
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+p {
+    font-size: 1.1rem;
+    color: #dddddd;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    #map {
+        height: 250px;
+    }
+
+    .map-container {
+        height: 300px; /* Adjust the map container height for better visibility on tablets */
+    }
+
+    #location-search {
+        width: 70%; /* Make the search bar wider on medium screens */
+    }
+
+    .search-btn {
+        padding: 8px 15px; /* Adjust button size for medium screens */
+    }
+
+    .nav-icon {
+        width: 25px; /* Adjust nav icon size for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    #map {
+        height: 200px;
+    }
+
+    footer {
+        text-align: center;
+        padding: 10px;
+        background-color: #18219e;
+        position: fixed;
+        width: 100%;
+        bottom: 0;
+    }
+
+    .search-container {
+        flex-direction: column; /* Stack the search bar and button vertically */
+        width: 100%;
+        padding: 10px;
+    }
+
+    #location-search {
+        width: 80%; /* Make the search bar nearly full width */
+        margin-bottom: 10px;
+    }
+
+    .search-btn {
+        width: 80%;
+        margin-top: 10px; /* Space out the button under the search bar */
+    }
+
+    .nav-icon {
+        width: 20px; /* Reduce the size of nav icons */
+    }
+
+    h1 {
+        font-size: 2rem; /* Adjust heading font size for small screens */
+    }
+
+    p {
+        font-size: 1rem;
+    }
+
+    .logout-button {
+        padding: 5px 10px;
+    }
+
+    .logout-button .nav-icon {
+        width: 20px;
+    }
+}
+
+.unselectable {
+    -webkit-user-select: none;
+    user-select: none;
+}

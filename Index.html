@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form</title>
+    <link rel="stylesheet" href="Index.css">
+    <script type="module" src="Index.js" defer></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Crimson+Pro">
+
+</head>
+<body>
+    
+    <div class="loca">
+        <h1><b>L🌏CATIFY</b></h1>
+ 
+    <div class="login-container">
+       <h1>Login</h1>
+        <form id="loginForm">
+            <label for="username">Username</label>
+            <input type="text" id="username" name="username" required>
+           
+            <div class="password-container">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required>
+                <span id="togglePassword" class="eye-icon">👁️</span>
+            </div>
+
+            <button type="submit" id="loginButton">Login</button>
+            
+            <div class="Signup">
+                <p>Don't have an account? <a href="Html/Signup.html">Sign Up</a></p>
+            </div>
+        </form>
+    </div>
+
+    <div id="popup" class="popup">
+        <div class="popup-content">
+            <h2>Great!</h2>
+            <p>You Have Successfully Logged In! 😄</p>
+            <button id="closePopup">Close</button>
+        </div>
+    </div>
+
+    <div id="errorPopup" class="popup">
+        <div class="popup-content">
+            <h2>Error!</h2>
+            <p>Incorrect username or password.😛</p>
+            <p>Try again.</p>
+            <button id="closeErrorPopup">Close</button>
+        </div>
+    </div>
+</body>
+</html>

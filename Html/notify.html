@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notifications</title>
+    <link rel="stylesheet" href="../Css/notify.css">
+</head>
+<body>
+    <nav>
+        <a href="../Html/Main.html">
+            <img src="../Images/home-button.png" alt="Home" class="nav-icon">
+        </a>
+    
+        <!--<a href="#">
+            <img src="../Images/about.png" alt="AboutUs" class="nav-icon">
+        </a> --> 
+    
+        <a href="../Html/SearchMap.html">
+            <img src="../Images/placeholder.png" alt="Map" class="nav-icon">
+        </a>
+    
+        <a href="../Html/notify.html" id="notificationLink">
+            <img id="bellIcon" src="../Images/notification-bell.png" alt="Notification" class="nav-icon">
+            <span id="notificationCount" style="display:none;">0</span>
+        </a>
+    
+        <button id="../Html/logoutButton" class="logout-button" onclick="window.location.href='../Index.html'">
+            <img src="../Images/logout.png" alt="Logout" class="nav-icon">
+        </button>
+    </nav>
+
+    <header>
+        <h1>NOTIFICATIONS</h1>
+    </header>
+
+    <main>
+        <div class="notifications-container">
+            <div class="notification-container1">
+                <h2>Login Notifications<img  src="../Images/authentication.png" alt="login icon" class="icon"></h2>
+
+                <div id="loginNotificationList" class="notification-list"></div>
+            </div>
+
+            <div class="notification-container2">
+                <h2>Searched Maps<img src="../Images/searchchinchin.png" alt="map icon" class="icon"></h2>
+                <div id="searchNotificationList" class="notification-list"></div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 L🌏CATIFY. All rights reserved.</p>
+    </footer>
+
+    <script src="../JavaScript/notification.js" defer></script>
+</body>
+</html>

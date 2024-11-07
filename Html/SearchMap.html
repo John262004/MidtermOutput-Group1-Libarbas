@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Success</title>
+    <link rel="stylesheet" href="../Css/SearchMap.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.css" />
+    <script src="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Crimson+Pro&family=Literata&display=swap">
+
+</head>
+<body>
+    <nav>
+        <a href="../Html/Main.html">
+            <img src="../Images/home-button.png" alt="Home" class="nav-icon">
+        </a>
+    
+        <!--<a href="#">
+            <img src="../Images/about.png" alt="AboutUs" class="nav-icon">
+        </a> -->
+    
+        <a href="../Html/SearchMap.html">
+            <img src="../Images/placeholder.png" alt="Map" class="nav-icon">
+        </a>
+    
+        <a href="../Html/notify.html" id="notificationLink">
+            <img id="bellIcon" src="../Images/notification-bell.png" alt="Notification" class="nav-icon">
+            <span id="notificationCount" style="display:none;">0</span>
+        </a>
+    
+        <button id="../Html/logoutButton" class="logout-button" onclick="window.location.href='../Index.html'">
+            <img src="../Images/logout.png" alt="Logout" class="nav-icon">
+        </button>
+    </nav>
+
+    <div class="success-container">
+        <h1>L🌏CATIFY</h1>
+        <p>Navigate to the location you want.</p>
+
+        <div class="search-container">
+            <input id="location-search" type="text" placeholder="Search location" />
+            <button type="button" class="search-btn" onclick="searchLocation()">
+                <img src="../Images/search.png" alt="Search Icon"> 
+            </button>
+        </div>
+
+        <div class="map-container">
+            <div id="map"></div>
+        </div>
+
+        <div id="notification-list"></div> 
+
+        <footer>
+            <p>MIDTERM PROJECT SIA 101 GROUP1</p>
+        </footer>
+    </div>
+
+    <script src="../JavaScript/searchmap.js" defer></script>
+</body>
+</html>

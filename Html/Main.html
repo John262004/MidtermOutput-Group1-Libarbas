@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main</title>
+    
+    <link rel="stylesheet" href="../Css/main.css">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Crimson+Pro&family=Literata">
+
+</head>
+<body>
+
+<nav>
+    <a href="#" class="logo-link">
+        <img src="../Images/ssu.png" alt="Logo" class="logo-icon">
+    </a>
+
+    <a href="../Html/Main.html">
+        <img src="../Images/home-button.png" alt="Home" class="nav-icon">
+    </a>
+
+    <!--<a href="#">
+            <img src="../Images/about.png" alt="AboutUs" class="nav-icon">
+        </a> -->
+
+    <a href="../Html/SearchMap.html">
+        <img src="../Images/placeholder.png" alt="Map" class="nav-icon">
+    </a>
+
+    <a href="../Html/notify.html" id="notificationLink">
+        <img id="bellIcon" src="../Images/notification-bell.png" alt="Notification" class="nav-icon">
+        <span id="notificationCount" style="display:none;">0</span>
+    </a>
+
+    <button id="../Html/logoutButton" class="logout-button" onclick="window.location.href='../Index.html'">
+        <img src="../Images/logout.png" alt="Logout" class="nav-icon">
+    </button>
+</nav>
+
+    <div class="container">
+        <h1>Welcome to L🌏CATIFY</h1>
+        <p class="description">
+            LOCATIFY is a dynamic web application that allows users to explore and navigate different locations with ease. 
+            With intuitive search functionality and a smooth interface, it provides an engaging experience for those seeking to 
+            discover places and receive timely notifications on updates.
+        </p>
+        
+        <p class="midterm-info">MIDTERM PROJECT SIA 101</p>
+        <p class="midterm-info">GROUP 1</p>
+    </div>
+
+
+    <div id="welcomeMessage"></div>
+
+    <div class="cards-container">
+        <div class="card">
+            <img src="../Images/streetmap...png" alt="Location 1">
+            <h3>Explore Locations</h3>
+            <p>Discover new places to visit and navigate with ease using our powerful search feature.</p>
+        </div>
+        <div class="card">
+            <img src="../Images/notification-vector-icon.jpg" alt="Notifications">
+            <h3>Get Notifications</h3>
+            <p>Stay updated with real-time notifications about new places and updates.</p>
+        </div>
+        <div class="card">
+            <img src="../Images/interactive.png" alt="Map View">
+            <h3>Interactive Map</h3>
+            <p>Use our interactive map to explore and get directions to your desired locations.</p>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 L🌏CATIFY. All rights reserved.</p>
+    </footer>
+    
+
+    <script src="../JavaScript/Main.js"></script>
+</body>
+</html>

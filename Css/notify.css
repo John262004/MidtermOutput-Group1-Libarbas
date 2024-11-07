@@ -1,0 +1,230 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;  
+    background-color: #f0f0f0;  
+    margin: 0;
+    padding: 0;
+    color: #333; 
+}
+
+nav a {
+display: inline-block;
+padding: 10px 15px;
+}
+
+.nav-icon {
+    width: 24px;
+    height: 24px;
+    margin: 0 10px;
+    vertical-align: middle;
+}
+
+nav {
+    background-color: rgba(173, 29, 29, 0.378);
+    padding: 10px;
+    text-align: center;
+    width: 100%; 
+}
+
+nav a {
+    display: inline-block;
+    padding: 10px 15px;
+}
+
+nav a:hover {
+    background-color: #555;
+}
+
+.nav-icon {
+    width: 30px; 
+    height: auto; 
+}
+
+.logout-button {
+    background: none; 
+    border: none; 
+    cursor: pointer; 
+    padding: 10px 15px;  
+    display: inline-block; 
+    align-items: center;  
+    margin-right: 10px;
+}
+     
+.logout-button .nav-icon {
+    width: 24px;  
+    height: 24px;  
+    vertical-align:middle;
+}
+    
+.logout-button:hover{
+    transform: translateY(-10px);
+}
+
+header {
+    background-color: #4A4A4A;  
+    color: #FFFFFF;  
+    padding: 20px;
+    text-align: center;
+    border-bottom: 4px solid #C0C0C0;  
+}
+
+main {
+    max-width: 800px; 
+    margin: 30px auto; 
+    padding: 20px;
+    background-color: #FFFFFF; 
+    border-radius: 10px; 
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.notifications-container {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.notification-container1,
+.notification-container2 {
+    margin-bottom: 20px; 
+    padding: 15px;
+    border: 1px solid #d9d9d9; 
+    border-radius: 8px; 
+    background-color: #f7f7f7; 
+}
+
+.notification-list {
+    margin-top: 10px; 
+    max-height: 200px;  
+    overflow-y: auto; 
+}
+ 
+.notification-list div {
+    padding: 12px;
+    border-bottom: 1px solid #e0e0e0;  
+    transition: background-color 0.2s; 
+}
+
+.notification-list div:hover {
+    background-color: #e6f7ff;  
+}
+ 
+.notification-list div:last-child {
+    border-bottom: none;  
+}
+
+@media (max-width: 600px) {
+    main {
+        padding: 15px; 
+    }
+
+    .clear-data-btn,
+    .logout-btn {
+        width: 100%; 
+    }
+}
+
+footer {
+    background-color: #4A4A4A;
+    color: #FFFFFF; 
+    padding: 15px; 
+    text-align: center; 
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer-link {
+    color: #FFFFFF;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-link:hover {
+    color: #ff6b81;
+}.member-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 10px 0; 
+}
+
+.member-list li {
+    margin: 5px 0;
+    color: #FFFFFF; 
+}
+ 
+.members-container {
+    display: flex;
+    flex-wrap: wrap;  
+    justify-content: space-between;  
+    margin-top: 20px;  
+}
+
+.member-card {
+    background-color: #0e33ad; /* Light background for cards */
+    border: 1px solid #ddd; /* Light border */
+    border-radius: 8px; /* Rounded corners */
+    padding: 15px; /* Inner padding */
+    margin: 10px; /* Space between cards */
+    width: calc(20% - 20px); /* Set card width and account for margins */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    text-align: center; /* Center text */
+}
+
+/* Member image styles */
+.member-image {
+    width: 100px; /* Fixed width for images */
+    height: 100px; /* Fixed height for images */
+    border-radius: 50%; /* Circular image */
+    margin-bottom: 10px; /* Space below the image */
+}
+
+/* Responsive styles for cards */
+@media (max-width: 768px) {
+    .member-card {
+        width: calc(45% - 20px); /* Adjust width for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .member-card {
+        width: 100%; /* Full-width cards on mobile */
+    }
+}
+
+/* General styling for notification icons */
+.icon {
+    width: 24px; /* Adjust the size to be more like an icon */
+    height: 24px; /* Keep the height and width the same to maintain aspect ratio */
+    vertical-align: middle; /* Align the icon vertically in the middle of the text */
+    margin-left: 8px; /* Add some space between the text and the icon */
+}
+
+/* Adjustments for mobile view */
+@media (max-width: 600px) {
+    .icon {
+        width: 20px; /* Slightly smaller icons on smaller screens */
+        height: 20px;
+    }
+}
+
+.icon {
+    width: 24px; 
+    height: 24px;
+    vertical-align: middle; 
+    margin-left: 8px; 
+}
+
+/* Adjustments for mobile view */
+@media (max-width: 600px) {
+    .icon {
+        width: 20px; /* Slightly smaller icons on smaller screens */
+        height: 20px;
+    }
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #336;
+    color: #fff;
+    width: 100%; 
+}

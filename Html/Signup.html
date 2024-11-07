@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup Form</title>
+    <link rel="stylesheet" href="../Css/Signup.css">
+</head>
+<body>
+    <div class="login-container">
+        <h1>Sign Up!</h1>
+        <form id="signupForm">
+            <label for="username">Username (Email)</label>
+            <input type="email" id="username" name="username" required>
+
+            <div class="password-container">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required>
+                <span id="togglePassword" class="eye-icon">👁️</span>
+            </div>
+
+            <div class="confirmpassword">
+                <label for="confirmpassword">Confirm Password</label>
+                <input type="password" id="confirmpassword" name="confirmpassword" required>
+                <span id="toggleConfirmPassword" class="eye-icon1">👁️</span>
+            </div>
+
+            <button type="submit">Sign Up</button>
+
+            <div class="Signup">
+                <p>Already have an account? <a href="../Index.html">Log In</a></p>
+            </div>
+        </form>
+    </div>
+
+    <div id="popup" class="popup">
+        <div class="popup-content">
+            <h2>Success!</h2>
+            <p>You have successfully signed up! 😄</p>
+            <button id="closePopup">Close</button>
+        </div>
+    </div>
+
+    <div id="passwordMismatchPopup" class="popup">
+        <div class="popup-content">
+            <h2>Error! 😲</h2>
+            <p>There's an error confirming your password! Please try again.</p>
+            <button id="closePasswordMismatchPopup">Close</button>
+        </div>
+    </div>
+
+    <script src="../JavaScript/Signup.js" type="module"></script>
+</body>
+</html>
