@@ -31,7 +31,7 @@ const auth = getAuth(app);
 
 // Function to send a webhook notification for signup
 function sendWebhookNotification(action, userEmail) {
-    const webhookUrl = "https://webhook.site/55735d4c-4dd8-447a-9758-b50e87a3c96a";  // Replace with your actual webhook URL
+    const webhookUrl = "https://webhook.site/0eaf34f7-6869-4dde-88ba-10cbfb3b6843";  // Replace with your actual webhook URL
     const payload = {
         action: action,
         userEmail: userEmail,
@@ -41,17 +41,13 @@ function sendWebhookNotification(action, userEmail) {
         headers: {
             'Content-Type': 'application/json',
         },
-        mode: 'cors', // Explicitly specify CORS mode
         body: JSON.stringify(payload),
     })
-    .then(response => {
-        console.log('Webhook notification response status:', response.status);
-        return response.json();
-    })
-    .then(data => console.log('Webhook notification data:', data))
-    .catch(error => console.error('Error sending webhook notification:', error));    
+    .then(response => console.log('Webhook notification sent:', response))
+    .catch(error => console.error('Error sending webhook notification:', error));
 }
 
+// Handle signup form submission
 window.addEventListener('load', () => {
     const signupForm = document.getElementById('signupForm');
     const togglePassword = document.getElementById('togglePassword');
@@ -63,7 +59,7 @@ window.addEventListener('load', () => {
     togglePassword.addEventListener('click', function () {
         const type = passwordInput.getAttribute('type') === 'password' ? 'text' : 'password';
         passwordInput.setAttribute('type', type);
-        this.textContent = type === 'password' ? '👁️' : '👁️‍🗨️';
+        this.textContent = type === 'password' ? '👁️' : '👁️‍🗨️'; 
     });
 
     // Toggle password visibility for the confirm password field
@@ -72,20 +68,14 @@ window.addEventListener('load', () => {
         confirmPasswordInput.setAttribute('type', type);
         this.textContent = type === 'password' ? '👁️' : '👁️‍🗨️';
     });
-    
+
+
     if (signupForm) {
         signupForm.addEventListener('submit', (e) => {
             e.preventDefault();
 
             const email = document.getElementById('username').value;
             const password = passwordInput.value;
-            const confirmPassword = confirmPasswordInput.value;
-
-            // Check if passwords match
-            if (password !== confirmPassword) {
-                alert('Passwords do not match!');
-                return; // Prevent form submission if passwords don't match
-            }
 
             createUserWithEmailAndPassword(auth, email, password)
                 .then((userCredential) => {
@@ -98,17 +88,8 @@ window.addEventListener('load', () => {
                     // Send webhook notification on successful signup
                     sendWebhookNotification('User signed up', user.email);
 
-                    // Show the success popup after signup
-                    const popup = document.getElementById('popup');
-                    popup.style.display = 'flex'; // Show the popup
-
-                    // Close the popup when the "Close" button is clicked
-                    const closePopup = document.getElementById('closePopup');
-                    closePopup.addEventListener('click', () => {
-                        popup.style.display = 'none'; // Hide the popup
-                        // Optionally, redirect after closing popup
-                        window.location.href = "../index.html"; 
-                    });
+                    // Redirect to Main.html after signup
+                    window.location.href = "../index.html"; 
                 })
                 .catch((error) => {
                     console.error('Signup failed:', error.code, error.message);
@@ -116,27 +97,4 @@ window.addEventListener('load', () => {
                 });
         });
     }
-});
-
-// Add this to your signup.js
-
-document.getElementById('signupForm').addEventListener('submit', function(event) {
-    event.preventDefault(); // Prevent form from submitting before validation
-
-    const password = document.getElementById('password').value;
-    const confirmPassword = document.getElementById('confirmpassword').value;
-
-    // Check if passwords match
-    if (password !== confirmPassword) {
-        // Show the password mismatch popup
-        document.getElementById('passwordMismatchPopup').style.display = 'flex';
-    } else {
-        // If passwords match, you can proceed with the form submission
-        document.getElementById('signupForm').submit();
-    }
-});
-
-// Close the popup when the user clicks "Close"
-document.getElementById('closePasswordMismatchPopup').addEventListener('click', function() {
-    document.getElementById('passwordMismatchPopup').style.display = 'none';
 });

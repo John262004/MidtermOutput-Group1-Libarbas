@@ -1,23 +1,22 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+*{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
 }
 
 body {
-    font-family: Arial, sans-serif;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url('../Images/signbg.jpg'); 
-    background-size: cover; /* Ensure the image covers the entire body */
-    background-position: center; /* Center the image */
-    background-attachment: fixed; /* Keep the background fixed while scrolling */
-    transition: background-position 0.05s; /* Smooth transition */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    overflow: hidden;
+font-family: Arial, sans-serif;
+background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url('../Images/signbg.jpg'); 
+background-size: cover; /* Ensure the image covers the entire body */
+background-position: center; /* Center the image */
+background-attachment: fixed; /* Keep the background fixed while scrolling */
+transition: background-position 0.05s; /* Smooth transition */
+display: flex;
+justify-content: center;
+align-items: center;
+height: 100vh;
+overflow: hidden;
 }
-
 .login-container {
     background: rgba(255, 255, 255, 0.1); /* Semi-transparent background */
     padding: 20px;
@@ -159,48 +158,6 @@ button:hover {
     background-color: #45a049;
 }
 
-#passwordMismatchPopup {
-    display: none; /* Hidden by default */
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
-    justify-content: center;
-    align-items: center;
-}
-
-#passwordMismatchPopup .popup-content {
-    background-color: #f44336; /* Red color for error */
-    padding: 20px;
-    border-radius: 8px;
-    text-align: center;
-    width: 300px;
-}
-
-#passwordMismatchPopup .popup-content h2 {
-    color: #ffffff;
-}
-
-#passwordMismatchPopup .popup-content p {
-    color: #ffffff;
-}
-
-#passwordMismatchPopup button {
-    padding: 10px 20px;
-    background-color: #ff5722;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-#passwordMismatchPopup button:hover {
-    background-color: #e64a19;
-}
-
-/* Responsive Design */
 @media screen and (max-width: 768px) {
     .login-container {
         width: 90%;
