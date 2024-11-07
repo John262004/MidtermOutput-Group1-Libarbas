@@ -107,7 +107,7 @@ window.addEventListener('load', () => {
                     closePopup.addEventListener('click', () => {
                         popup.style.display = 'none'; // Hide the popup
                         // Optionally, redirect after closing popup
-                        window.location.href = "Login.html"; 
+                        window.location.href = "../index.html"; 
                     });
                 })
                 .catch((error) => {
