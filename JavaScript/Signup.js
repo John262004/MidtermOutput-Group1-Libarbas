@@ -32,7 +32,7 @@ const auth = getAuth(app);
 
 // Function to send a webhook notification for signup
 function sendWebhookNotification(action, userEmail) {
-    const webhookUrl = "https://webhook.site/0eaf34f7-6869-4dde-88ba-10cbfb3b6843";
+    const webhookUrl = "https://webhook.site/395d3c42-2e15-4cb4-917a-2dc9aaee102a";
     const payload = {
         action: action,
         userEmail: userEmail,

